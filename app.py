@@ -54,7 +54,7 @@ with col_logo:
     st.image("perfume_logo.png", width=80) 
 
 with col_titulo:
-    st.title("Asesoría Laboral Perfumistas")
+    st.title("Chalk Legal | Laboral")
 
 if not API_KEY or not VS_ID:
     st.error("Faltan credenciales en el archivo .env.")
@@ -146,5 +146,6 @@ if len(st.session_state.messages) > 0 and st.session_state.messages[-1]["role"] 
         st.session_state.messages.append({"role": "assistant", "content": answer_text})
 
         st.rerun()
+
 
 
