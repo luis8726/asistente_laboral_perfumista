@@ -18,8 +18,8 @@ load_dotenv()
 # --- CONFIGURACIÓN DE AVATARES ---
 try:
     # He actualizado los nombres de las variables para que coincidan con la temática
-    logo_path = "perfume_logo.png" 
-    logo_path_user = "perfume_logo.png"
+    logo_path = "assistant_logo.png" 
+    logo_path_user = "user_logo.png"
     USER_AVATAR = Image.open(logo_path_user)
     ASSISTANT_AVATAR = Image.open(logo_path)
 except Exception:
@@ -51,7 +51,7 @@ with st.sidebar:
 col_logo, col_titulo = st.columns([1, 8])
 with col_logo:
     # Asegúrate de tener este archivo o cambiarlo por el nombre de tu logo actual
-    st.image("perfume_logo.png", width=80) 
+    st.image("logo.png", width=80) 
 
 with col_titulo:
     st.title("Chalk Legal | Laboral")
@@ -146,6 +146,7 @@ if len(st.session_state.messages) > 0 and st.session_state.messages[-1]["role"] 
         st.session_state.messages.append({"role": "assistant", "content": answer_text})
 
         st.rerun()
+
 
 
 
