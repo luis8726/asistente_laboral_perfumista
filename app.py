@@ -51,7 +51,7 @@ with st.sidebar:
 col_logo, col_titulo = st.columns([1, 8])
 with col_logo:
     # Asegúrate de tener este archivo o cambiarlo por el nombre de tu logo actual
-    st.image("logo_perfumistas.png", width=80) 
+    st.image("perfume_logo.png", width=80) 
 
 with col_titulo:
     st.title("PerfumaLaw: Asesoría Laboral")
@@ -146,3 +146,4 @@ if len(st.session_state.messages) > 0 and st.session_state.messages[-1]["role"] 
         st.session_state.messages.append({"role": "assistant", "content": answer_text})
 
         st.rerun()
+
