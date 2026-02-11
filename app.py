@@ -18,8 +18,8 @@ load_dotenv()
 # --- CONFIGURACIÓN DE AVATARES ---
 try:
     # He actualizado los nombres de las variables para que coincidan con la temática
-    logo_path = "perfumista_asistente.png" 
-    logo_path_user = "user_perfumeria.png"
+    logo_path = "perfume_logo.png" 
+    logo_path_user = "perfume_logo.png"
     USER_AVATAR = Image.open(logo_path_user)
     ASSISTANT_AVATAR = Image.open(logo_path)
 except Exception:
@@ -144,4 +144,5 @@ if len(st.session_state.messages) > 0 and st.session_state.messages[-1]["role"] 
         answer_text = resp.output_text or "(No se pudo generar una respuesta legal)"
         placeholder.markdown(answer_text)
         st.session_state.messages.append({"role": "assistant", "content": answer_text})
+
         st.rerun()
